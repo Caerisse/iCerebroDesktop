@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.ProgressIndicator?>
+<StackPane
+  fx:controller="dev.shinobi.icerebro.controllers.TunnelController"
+  xmlns:fx="http://javafx.com/fxml"
+  styleClass="root">
+   <BorderPane
+     fx:id="border_pane">
+      <padding>
+         <Insets
+           top="25"
+           right="25"
+           bottom="25"
+           left="25"/>
+      </padding>
+
+      <top>
+         <Label
+           alignment="CENTER"
+           fx:id="title"
+           text="Inactive"
+         />
+      </top>
+
+      <center>
+         <ScrollPane
+           fx:id="monitor_scroll"
+         >
+            <BorderPane.margin>
+               <Insets
+                 top="15"
+                 right="15"
+                 bottom="15"
+                 left="15"/>
+            </BorderPane.margin>
+            <padding>
+               <Insets
+                 top="10"
+                 right="10"
+                 bottom="10"
+                 left="10"/>
+            </padding>
+            <Text
+              fx:id="monitor_text"
+            />
+         </ScrollPane>
+      </center>
+
+      <bottom>
+         <HBox
+           spacing="10" alignment="BOTTOM_RIGHT"
+         >
+            <Button
+              fx:id="start_stop_button"
+              text="Start"
+              onAction="#start_stop"
+              />
+         </HBox>
+      </bottom>
+   </BorderPane>
+   <ProgressIndicator
+   fx:id="progress_bar"
+   visible="false"/>
+</StackPane>

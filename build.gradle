@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+    id "com.github.johnrengelman.shadow" version "6.1.0"
+}
+
+group 'dev.shinobi'
+version '1.0-SNAPSHOT'
+
+application {
+    mainClassName = "dev.shinobi.icerebro.controllers.App"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.json:json:20200518'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.8.1'
+    implementation 'com.jcraft:jsch:0.1.55'
+}
+
